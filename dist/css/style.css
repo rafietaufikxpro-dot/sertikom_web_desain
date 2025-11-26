@@ -31,7 +31,7 @@
 /* navbar */
 /* hero */
 .hero {
-  background-image: linear-gradient(rgba(1, 1, 1, 0)),
+  background-image: linear-gradient(rgba(1, 1, 1, 0.5)),
     url(../../asset/img/christin-hume-Hcfwew744z4-unsplash.jpg);
   background-repeat: no-repeat;
   width: 100%;
@@ -63,5 +63,8 @@
   color: #ffff;
   background-color: var(--btn-color);
   transform: scale(1.05);
+}
+.decsteksabout {
+  text-align: justify;
 }
 /* about */
