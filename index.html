@@ -30,12 +30,14 @@
       type="image/x-icon"
     />
     <link rel="stylesheet" href="dist/css/style.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
-
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"
+    />
   </head>
   <body>
     <!-- navbar -->
-    <nav class="navbar  navbar-expand-lg fixed-top navbar-dark">
+    <nav class="navbar navbar-expand-lg fixed-top navbar-dark">
       <div class="container">
         <img
           class="logo"
@@ -58,84 +60,92 @@
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
           <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link active mx-1" aria-current="page" href="#"
-                >Home</a
-              >
+              <a class="nav-link active mx-1" aria-current="page" href="#home">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link mx-1 text-light" href="#">layanan</a>
+              <a class="nav-link mx-1 text-light" href="#layanan">layanan</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link mx-1 text-light" href="#">tentang kami</a>
+              <a class="nav-link mx-1 text-light" href="#about">tentang kami</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link sc0 text-dark rounded mx-1" href="#"
-                >hubungi kami</a
+              <a class="nav-link sc0 text-light rounded mx-1" href="#vision"
+                >Janji kami</a
               >
             </li>
           </ul>
-          <div>
-            <i class="fa-brands fa-bootstrap"></i>
-            <i class="fa-brands fa-android fs-5 mx-2"></i>
-          </div>
+          
         </div>
       </div>
     </nav>
     <!-- navbar -->
     <!-- hero -->
-   <!-- HERO with Video -->
-<div class="hero">
-  <video id="heroVideo" autoplay loop muted playsinline class="hero-video">
-    <source src="asset/img/LLM Labs! 🚀.mp4" type="video/mp4" />
-    Your browser does not support the video tag.
-  </video>
+    <!-- HERO with Video -->
+    <div class="hero" id="home">
+      <video id="heroVideo" autoplay loop muted playsinline class="hero-video">
+        <source src="asset/img/LLM Labs! 🚀.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
 
-  <!-- TOMBOL PLAY / PAUSE -->
-  <button type="button" class="video-control" id="videoControlBtn">
-    <i id="videoIcon" class="fa-solid fa-pause"></i>
-  </button>
+      <!-- TOMBOL PLAY / PAUSE -->
+      <button type="button" class="video-control" id="videoControlBtn">
+        <i id="videoIcon" class="fa-solid fa-pause"></i>
+      </button>
 
-  <div class="hero-content">
-   <h1 class="title">Visidigital</h1>
-<p class="tagline">
-  Membantu bisnis Anda bertumbuh melalui solusi digital modern, strategi yang tepat, 
-  dan teknologi yang dirancang untuk hasil yang maksimal.
-</p>
+      <div class="hero-content">
+        <h1 class="title">Visidigital</h1>
+        <p class="tagline">
+          Membantu bisnis Anda bertumbuh melalui solusi digital modern, strategi
+          yang tepat, dan teknologi yang dirancang untuk hasil yang maksimal.
+        </p>
 
-    <button class="btn btn-warning" onclick="openPopup()">Konsultasi Gratis</button>
-  </div>
-</div>
+        <button class="btn btn-warning" onclick="openPopup()">
+          Konsultasi Gratis
+        </button>
+      </div>
+    </div>
 
-
- 
     <!-- hero -->
     <!-- patner -->
-   
+
     <!-- SWIPER -->
     <div class="patner py-3">
-  <div class="container">
-    <p class="text-center mb-3">kami berkolaborasi dengan perusahaan :</p>
-<div class="swiper mySwiper">
-    <div class="swiper-wrapper">
-      <div class="swiper-slide"><img src="asset/img/one-piece-skull-seeklogo.png" alt=""></div>
-      <div class="swiper-slide"><img src="asset/img/kapal-api-seeklogo.png" alt=""></div>
-      <div class="swiper-slide"><img src="asset/img/halal-mui-seeklogo.png" alt=""></div>
-      <div class="swiper-slide"><img src="asset/img/volkswagen-seeklogo.png" alt=""></div>
-      <div class="swiper-slide"><img src="asset/img/garuda-pancasila-seeklogo.png" alt=""></div>
-      <div class="swiper-slide"><img src="asset/img/honda-seeklogo.png" alt=""></div>
-      <div class="swiper-slide"><img src="asset/img/bmw-seeklogo.png" alt=""></div>
-     
+      <div class="container">
+        <p class="text-center mb-3">kami berkolaborasi dengan perusahaan :</p>
+        <div class="swiper mySwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img src="asset/img/one-piece-skull-seeklogo.png" alt="" />
+            </div>
+            <div class="swiper-slide">
+              <img src="asset/img/kapal-api-seeklogo.png" alt="" />
+            </div>
+            <div class="swiper-slide">
+              <img src="asset/img/halal-mui-seeklogo.png" alt="" />
+            </div>
+            <div class="swiper-slide">
+              <img src="asset/img/volkswagen-seeklogo.png" alt="" />
+            </div>
+            <div class="swiper-slide">
+              <img src="asset/img/garuda-pancasila-seeklogo.png" alt="" />
+            </div>
+            <div class="swiper-slide">
+              <img src="asset/img/honda-seeklogo.png" alt="" />
+            </div>
+            <div class="swiper-slide">
+              <img src="asset/img/bmw-seeklogo.png" alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-    
-  </div>
-   
-   
-  </div>
-</div>
 
     <!-- patner -->
     <!-- about -->
-    <div class="about my-5 justify-content-center align-items-center">
+    <div
+      class="about my-5 justify-content-center align-items-center"
+      id="about"
+    >
       <div class="container">
         <div class="row row-cols-lg-2 row-cols-1 row-cols-md-2">
           <div class="col">
@@ -177,68 +187,71 @@
     </div>
     <!-- about -->
     <!-- vision -->
-    <div class="vision text-light py-5">
-  <div class="container">
+    <div class="vision text-light py-5" id="vision">
+      <div class="container">
+        <h1 class="text-center decsvisionh3 mb-4">Yang Kami Janjikan</h1>
 
-    <h1 class="text-center decsvisionh3 mb-4">Yang Kami Janjikan</h1>
+        <div class="row g-4 justify-content-center">
+          <!-- Card 1 -->
+          <div class="col-lg-4 col-md-6 col-sm-6">
+            <div class="vision-card text-center p-3">
+              <i class="fa-solid fa-building-columns vision-icon"></i>
+              <p>
+                <b>menjadi pilar utama </b><br />
+                Dengan pendekatan konsultasi yang terukur serta penerapan
+                teknologi yang tepat guna, kami membantu perusahaan Anda
+                bertumbuh secara modern, efisien, dan kompetitif.
+              </p>
+            </div>
+          </div>
 
-    <div class="row g-4 justify-content-center">
+          <!-- Card 2 -->
+          <div class="col-lg-4 col-md-6 col-sm-6">
+            <div class="vision-card text-center p-3">
+              <i class="fa-solid fa-users-line vision-icon"></i>
+              <p>
+                <b>komunikatif</b><br />
+                Setiap proyek yang kami jalankan adalah perjalanan bersama,
+                tempat kami mendengarkan, memahami, dan menciptakan solusi
+                teknologi yang meningkatkan kinerja bisnis Anda.
+              </p>
+            </div>
+          </div>
 
-      <!-- Card 1 -->
-      <div class="col-lg-4 col-md-6 col-sm-6">
-        <div class="vision-card text-center p-3">
-          <i class="fa-solid fa-building-columns vision-icon"></i>
-          <p>
-            <b>menjadi pilar utama </b><br>
-            Dengan pendekatan konsultasi yang terukur serta penerapan teknologi yang tepat guna, 
-            kami membantu perusahaan Anda bertumbuh secara modern, efisien, dan kompetitif.
-          </p>
+          <!-- Card 3 -->
+          <div class="col-lg-4 col-md-6 col-sm-6">
+            <div class="vision-card text-center p-3">
+              <i class="fa-solid fa-crosshairs vision-icon"></i>
+              <p>
+                <b>fokus kami</b><br />
+                Kami mencurahkan perhatian penuh untuk memahami tantangan bisnis
+                Anda sehingga solusi yang diberikan benar-benar tepat sasaran.
+              </p>
+            </div>
+          </div>
         </div>
       </div>
-
-      <!-- Card 2 -->
-      <div class="col-lg-4 col-md-6 col-sm-6">
-        <div class="vision-card text-center p-3">
-          <i class="fa-solid fa-users-line vision-icon"></i>
-          <p>
-            <b>komunikatif</b><br>
-            Setiap proyek yang kami jalankan adalah perjalanan bersama, tempat kami mendengarkan, 
-            memahami, dan menciptakan solusi teknologi yang meningkatkan kinerja bisnis Anda.
-          </p>
-        </div>
-      </div>
-
-      <!-- Card 3 -->
-      <div class="col-lg-4 col-md-6 col-sm-6">
-        <div class="vision-card text-center p-3">
-          <i class="fa-solid fa-crosshairs vision-icon"></i>
-          <p>
-            <b>fokus kami</b><br>
-            Kami mencurahkan perhatian penuh untuk memahami tantangan bisnis Anda sehingga solusi 
-            yang diberikan benar-benar tepat sasaran.
-          </p>
-        </div>
-      </div>
-
     </div>
 
-  </div>
-</div>
-
     <!-- vision -->
-   
+
     <!-- layanan -->
-    <div class="layanan my-5">
+    <div class="layanan my-5" id="layanan">
       <div class="container">
-        <div class="row row-cols-lg-3 row-cols-md-3 row-cols-1 justify-content-center">
+        <div
+          class="row row-cols-lg-3 row-cols-md-3 row-cols-1 justify-content-center"
+        >
           <!-- CARD 1 -->
-          <div class="col d-flex justify-content-center ">
+          <div class="col d-flex justify-content-center">
             <div class="card1">
               <div class="atas">
-                <span class="text-white">Fondasi kokoh untuk transformasi digital</span>
+                <span class="text-white"
+                  >Fondasi kokoh untuk transformasi digital</span
+                >
                 <p class="text-white">
-             Kami memperkuat langkah bisnis Anda dengan sistem yang rapi dan terstruktur.
-Keputusan menjadi lebih cepat, tepat, dan siap membawa Anda maju.
+                  Kami memperkuat langkah bisnis Anda dengan sistem yang rapi
+                  dan terstruktur. Keputusan menjadi lebih cepat, tepat, dan
+                  siap membawa Anda maju.
                   <i class="fa-solid fa-arrow-right arrow-icon"></i>
                 </p>
               </div>
@@ -254,8 +267,9 @@ Keputusan menjadi lebih cepat, tepat, dan siap membawa Anda maju.
               <div class="atas bg-white">
                 <span class="text-dark">Strategi dengan akurasi tinggi</span>
                 <p class="text-dark">
-              Kami menyusun rencana yang terukur dan relevan bagi pertumbuhan bisnis Anda.
-Fokusnya sederhana: membuat Anda unggul di pasar
+                  Kami menyusun rencana yang terukur dan relevan bagi
+                  pertumbuhan bisnis Anda. Fokusnya sederhana: membuat Anda
+                  unggul di pasar
                   <i class="fa-solid fa-arrow-right arrow-icon"></i>
                 </p>
               </div>
@@ -266,13 +280,13 @@ Fokusnya sederhana: membuat Anda unggul di pasar
           </div>
 
           <!-- CARD 3 -->
-          <div class=" col d-flex justify-content-center">
+          <div class="col d-flex justify-content-center">
             <div class="col card1">
               <div class="atas">
                 <span class="text-white">Solusi kreatif yang berdampak</span>
                 <p class="text-white">
-                Kami mengubah ide menjadi produk yang bernilai dan fungsional.
-Inovasi yang bukan hanya terlihat—tapi bekerja
+                  Kami mengubah ide menjadi produk yang bernilai dan fungsional.
+                  Inovasi yang bukan hanya terlihat—tapi bekerja
                   <i class="fa-solid fa-arrow-right arrow-icon"></i>
                 </p>
               </div>
@@ -281,17 +295,20 @@ Inovasi yang bukan hanya terlihat—tapi bekerja
               </div>
             </div>
           </div>
-          
         </div>
-        <div class="row row-cols-lg-3 row-cols-md-3 row-cols-1   justify-content-center">
+        <div
+          class="row row-cols-lg-3 row-cols-md-3 row-cols-1 justify-content-center"
+        >
           <!-- card4 -->
-           <div class=" col d-flex justify-content-center">
+          <div class="col d-flex justify-content-center">
             <div class="card2">
               <div class="atas bg-white">
-                <span class="text-dark">Integrasi cerdas untuk produktivitas</span>
+                <span class="text-dark"
+                  >Integrasi cerdas untuk produktivitas</span
+                >
                 <p class="text-dark">
-               Kami menyatukan sistem agar bekerja lebih cepat dan efisien.
-Semua terhubung, semua bergerak selaras
+                  Kami menyatukan sistem agar bekerja lebih cepat dan efisien.
+                  Semua terhubung, semua bergerak selaras
                   <i class="fa-solid fa-arrow-right arrow-icon"></i>
                 </p>
               </div>
@@ -300,15 +317,17 @@ Semua terhubung, semua bergerak selaras
               </div>
             </div>
           </div>
- <!-- card4 -->
-  <!-- card5 -->
-        <div class=" col d-flex justify-content-center">
+          <!-- card4 -->
+          <!-- card5 -->
+          <div class="col d-flex justify-content-center">
             <div class="card1">
               <div class="atas">
-                <span class="text-white">Visual kuat yang membangun kepercayaan</span>
+                <span class="text-white"
+                  >Visual kuat yang membangun kepercayaan</span
+                >
                 <p class="text-white">
-              Kami merancang identitas yang elegan dan berkarakter.
-Setiap detail menegaskan profesionalisme brand Anda
+                  Kami merancang identitas yang elegan dan berkarakter. Setiap
+                  detail menegaskan profesionalisme brand Anda
                   <i class="fa-solid fa-arrow-right arrow-icon"></i>
                 </p>
               </div>
@@ -317,15 +336,15 @@ Setiap detail menegaskan profesionalisme brand Anda
               </div>
             </div>
           </div>
-  <!-- card5 -->
-   <!-- card6 -->
- <div class=" col d-flex justify-content-center">
+          <!-- card5 -->
+          <!-- card6 -->
+          <div class="col d-flex justify-content-center">
             <div class="card2">
               <div class="atas bg-white">
                 <span class="text-dark">Sistem rapi, hasil maksimal</span>
                 <p class="text-dark">
-              Kami mengoptimalkan alur kerja agar lebih cepat dan konsisten.
-Ketika semuanya teratur, performa bisnis meningkat drastis
+                  Kami mengoptimalkan alur kerja agar lebih cepat dan konsisten.
+                  Ketika semuanya teratur, performa bisnis meningkat drastis
                   <i class="fa-solid fa-arrow-right arrow-icon"></i>
                 </p>
               </div>
@@ -334,8 +353,7 @@ Ketika semuanya teratur, performa bisnis meningkat drastis
               </div>
             </div>
           </div>
-   <!-- card6 -->
-          
+          <!-- card6 -->
         </div>
       </div>
     </div>
@@ -358,10 +376,10 @@ Ketika semuanya teratur, performa bisnis meningkat drastis
           <div class="col-lg-4 col-md-6">
             <h5 class="footer-subtitle">Menu</h5>
             <ul class="footer-list text-dark">
-              <li><a href="#">Beranda</a></li>
-              <li><a href="#">Tentang Kami</a></li>
-              <li><a href="#">Layanan</a></li>
-              <li><a href="#">Hubngi Kami</a></li>
+              <li><a href="#home">Beranda</a></li>
+              <li><a href="#about">Tentang Kami</a></li>
+              <li><a href="#layanan">Layanan</a></li>
+              <li><a href="#vision">Hubungi Kami</a></li>
             </ul>
           </div>
 
@@ -387,53 +405,52 @@ Ketika semuanya teratur, performa bisnis meningkat drastis
     <!-- footer -->
 
     <!-- login popup -->
-   
 
-<div id="loginPopup" class="popup-modern">
-  <div class="popup-box">
-    <span class="close-modern" onclick="closePopup()">&times;</span>
+    <div id="loginPopup" class="popup-modern">
+      <div class="popup-box">
+        <span class="close-modern" onclick="closePopup()">&times;</span>
 
-    <h2 class="popup-title-modern">Konsultasi Gratis</h2>
-    <p class="popup-desc-modern">
-      Isi formulir di bawah ini dan tim kami akan segera menghubungi Anda.
-    </p>
+        <h2 class="popup-title-modern">Konsultasi Gratis</h2>
+        <p class="popup-desc-modern">
+          Isi formulir di bawah ini dan tim kami akan segera menghubungi Anda.
+        </p>
 
-    <form id="loginForm">
-      <div class="form-group-modern">
-        <label>Nama Lengkap</label>
-        <input type="text" id="name" placeholder="Masukkan nama anda">
-        <p class="error" id="nameError"></p>
+        <form id="loginForm">
+          <div class="form-group-modern">
+            <label>Nama Lengkap</label>
+            <input type="text" id="name" placeholder="Masukkan nama anda" />
+            <p class="error" id="nameError"></p>
+          </div>
+
+          <div class="form-group-modern">
+            <label>Email</label>
+            <input type="text" id="email" placeholder="Masukkan email anda" />
+            <p class="error" id="emailError"></p>
+          </div>
+
+          <div class="form-group-modern">
+            <label>Pesan Singkat</label>
+            <textarea
+              id="password"
+              placeholder="Tulis pesan anda..."
+            ></textarea>
+            <p class="error" id="passwordError"></p>
+          </div>
+
+          <button type="submit" class="btn-modern">Kirim Sekarang</button>
+        </form>
       </div>
-
-      <div class="form-group-modern">
-        <label>Email</label>
-        <input type="text" id="email" placeholder="Masukkan email anda">
-        <p class="error" id="emailError"></p>
-      </div>
-
-      <div class="form-group-modern">
-        <label>Pesan Singkat</label>
-        <textarea id="password" placeholder="Tulis pesan anda..."></textarea>
-        <p class="error" id="passwordError"></p>
-      </div>
-
-      <button type="submit" class="btn-modern">Kirim Sekarang</button>
-    </form>
-  </div>
-</div>
-
+    </div>
 
     <!-- login popup -->
-      <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
 
-    
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
       crossorigin="anonymous"
     ></script>
-    
-   <script src="dist/js/script.js "></script>
-    
+
+    <script src="dist/js/script.js"></script>
   </body>
 </html>

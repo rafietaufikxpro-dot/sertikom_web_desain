@@ -55,37 +55,39 @@ document.getElementById("loginForm").addEventListener("submit", function (e) {
 });
 // swiper
 
-  var swiper = new Swiper(".mySwiper", {
-    loop: true,
-    autoplay: {
-      delay: 2000,
-      disableOnInteraction: false,
-    },
+  try {
+    if (window.Swiper) {
+      var swiper = new Swiper(".mySwiper", {
+        loop: true,
+        autoplay: {
+          delay: 2000,
+          disableOnInteraction: false,
+        },
 
-    slidesPerView: 1,  /* default untuk HP */
-    spaceBetween: 20,
+        slidesPerView: 1,
+        spaceBetween: 20,
 
-    breakpoints: {
-      576: {          // iPhone besar / small tablet
-        slidesPerView: 2
-      },
-      768: {          // iPad
-        slidesPerView: 3
-      },
-      992: {          // Desktop
-        slidesPerView: 4
-      }
-    },
+        breakpoints: {
+          576: { slidesPerView: 2 },
+          768: { slidesPerView: 3 },
+          992: { slidesPerView: 4 }
+        },
 
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-    },
-    pagination: {
-      el: ".swiper-pagination",
-      clickable: true,
-    },
-  });
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+      });
+    } else {
+      console.warn("Swiper not available; skipping slider init.");
+    }
+  } catch (err) {
+    console.warn("Swiper init failed:", err);
+  }
 
 // vidio hero
 // Pastikan script dijalankan setelah DOM ready
@@ -140,4 +142,33 @@ window.addEventListener("scroll", function() {
   } else {
     navbar.classList.remove("scrolled");
   }
+});
+document.addEventListener('DOMContentLoaded', function () {
+  // Pilih semua link yang mengarah ke anchor di halaman
+  document.querySelectorAll('a[href^="#"]').forEach(link => {
+    const href = link.getAttribute('href');
+    if (!href || href === '#') return;
+
+    link.addEventListener('click', function () {
+      const targetId = this.getAttribute('href').slice(1);
+      const targetEl = document.getElementById(targetId);
+      if (!targetEl) return;
+
+      // Tutup navbar collapse di mobile, biarkan browser handle anchor default
+      const collapseEl = document.querySelector('.navbar-collapse');
+      if (collapseEl && collapseEl.classList.contains('show')) {
+        try {
+          if (window.bootstrap && window.bootstrap.Collapse) {
+            const instance = window.bootstrap.Collapse.getInstance(collapseEl) || new window.bootstrap.Collapse(collapseEl, { toggle: false });
+            instance.hide();
+          } else {
+            collapseEl.classList.remove('show');
+          }
+        } catch (_) {
+          collapseEl.classList.remove('show');
+        }
+      }
+      // Biarkan default click memproses hash; smooth di CSS
+    });
+  });
 });
