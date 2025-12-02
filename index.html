@@ -30,6 +30,8 @@
       type="image/x-icon"
     />
     <link rel="stylesheet" href="dist/css/style.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
+
   </head>
   <body>
     <!-- navbar -->
@@ -81,85 +83,353 @@
     </nav>
     <!-- navbar -->
     <!-- hero -->
-    <div class="hero d-flex align-items-center" id="hero">
-      <div class="container">
-        <div class="row">
-          <div class="col sc1 text-start text-light">
-            <h1 class="">
-              join barsama visidigital <br />
-              untuk membangun masa depan
-            </h1>
-            <p>membentuk masa depan yang kamu mau</p>
-            <button
-              type="button"
-              class="btn sc mx-2 btn-lg rounded-pill p-3 mb-2"
-            >
-              join member
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
+   <!-- HERO with Video -->
+<div class="hero">
+  <video id="heroVideo" autoplay loop muted playsinline class="hero-video">
+    <source src="asset/img/LLM Labs! 🚀.mp4" type="video/mp4" />
+    Your browser does not support the video tag.
+  </video>
+
+  <!-- TOMBOL PLAY / PAUSE -->
+  <button type="button" class="video-control" id="videoControlBtn">
+    <i id="videoIcon" class="fa-solid fa-pause"></i>
+  </button>
+
+  <div class="hero-content">
+    <h1>Visi Digital</h1>
+    <p>Konsultasi Bisnis & Teknologi Modern</p>
+    <button class="btn btn-warning" onclick="openPopup()">Konsultasi Gratis</button>
+  </div>
+</div>
+
+
+ 
     <!-- hero -->
+    <!-- patner -->
+   
+    <!-- SWIPER -->
+    <div class="patner py-3">
+  <div class="container">
+    <p class="text-center mb-3">kami berkolaborasi dengan perusahaan :</p>
+<div class="swiper mySwiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide"><img src="asset/img/one-piece-skull-seeklogo.png" alt=""></div>
+      <div class="swiper-slide"><img src="asset/img/kapal-api-seeklogo.png" alt=""></div>
+      <div class="swiper-slide"><img src="asset/img/halal-mui-seeklogo.png" alt=""></div>
+      <div class="swiper-slide"><img src="asset/img/volkswagen-seeklogo.png" alt=""></div>
+      <div class="swiper-slide"><img src="asset/img/garuda-pancasila-seeklogo.png" alt=""></div>
+      <div class="swiper-slide"><img src="asset/img/honda-seeklogo.png" alt=""></div>
+      <div class="swiper-slide"><img src="asset/img/bmw-seeklogo.png" alt=""></div>
+     
+    </div>
+    
+  </div>
+   
+   
+  </div>
+</div>
+
+    <!-- patner -->
     <!-- about -->
     <div class="about my-5 justify-content-center align-items-center">
       <div class="container">
-        <div class="row row-cols-lg-2 row-cols-1">
+        <div class="row row-cols-lg-2 row-cols-1 row-cols-md-2">
           <div class="col">
-            <img
-              class="w-100"
-              src="asset/img/Blue and White Clean Modern Company Profile Professional Presentation.png"
-              alt=""
-            />
+            <img class="w-100" src="asset/img/about me.png" alt="" />
           </div>
           <div class="col align-items-center">
-            <h3 class="decshero my-2 mx-3">
+            <h1 class="decshero my-2">
               Mewujudkan Visi Digital Anda dengan Solusi Cerdas
-            </h3>
-            <p class="my-4 mx-3 decsteksabout">
+            </h1>
+            <p class="decsteksabout">
               Visi Digital adalah perusahaan yang berfokus pada pengembangan
               solusi teknologi modern untuk membantu bisnis berkembang di era
               digital. Kami menghadirkan layanan profesional yang menghubungkan
               ide dengan teknologi, menghadirkan inovasi yang cerdas, terukur,
               dan tepat guna.
             </p>
-            <p class="decsteksabout mx-3">
+            <p class="decsteksabout">
               Dengan mengutamakan kualitas, efisiensi, dan hasil yang dapat
               diandalkan, Visi Digital berkomitmen untuk membangun masa depan
               digital bersama Anda. Setiap solusi yang kami tawarkan dirancang
               untuk memperkuat identitas, meningkatkan kinerja, dan membuka
               peluang baru bagi bisnis Anda.
             </p>
-            
-            </button>
-            <h3 class="my-4 decshero mx-3">
-              berkolaborasi dengan banyak perusahaan
-            </h3>
-            <p class="decsteksabout mx-3">
-             Kami percaya bahwa inovasi terbaik lahir dari kolaborasi. Visi Digital telah bekerja sama dengan berbagai perusahaan dari beragam industri untuk menciptakan solusi digital yang relevan, efektif, dan berdampak nyata. Melalui kemitraan yang kuat, kami menggabungkan keahlian, teknologi, dan pengalaman untuk menghadirkan hasil yang lebih besar dari sekadar layanan — sebuah ekosistem digital yang tumbuh bersama. Dengan jaringan kolaborasi yang luas, Visi Digital siap membantu setiap bisnis melangkah lebih jauh di era transformasi digital.
-            </p>
-            
+            <ul>
+              <li><i class="fa-solid fa-check"></i>&nbsp; konsultasi gratis</li>
+              <li>
+                <i class="fa-solid fa-check"></i>&nbsp;konsultasi yang
+                diigninkan
+              </li>
+              <li>
+                <i class="fa-solid fa-check"></i>&nbsp;menyelesaikan masalah
+                anda
+              </li>
+              <li><i class="fa-solid fa-check"></i>&nbsp;memberikan saran</li>
+            </ul>
           </div>
         </div>
       </div>
     </div>
     <!-- about -->
-    <!-- patner -->
-    <div class="patner">
+    <!-- vision -->
+    <div class="vision text-light py-5">
+  <div class="container">
+
+    <h1 class="text-center decsvisionh3 mb-4">Yang Kami Janjikan</h1>
+
+    <div class="row g-4 justify-content-center">
+
+      <!-- Card 1 -->
+      <div class="col-lg-4 col-md-6 col-sm-6">
+        <div class="vision-card text-center p-3">
+          <i class="fa-solid fa-building-columns vision-icon"></i>
+          <p>
+            <b>kami berjanji untuk menjadi pilar utama yang mendukung perkembangan bisnis Anda.</b><br>
+            Dengan pendekatan konsultasi yang terukur serta penerapan teknologi yang tepat guna, 
+            kami membantu perusahaan Anda bertumbuh secara modern, efisien, dan kompetitif.
+          </p>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="col-lg-4 col-md-6 col-sm-6">
+        <div class="vision-card text-center p-3">
+          <i class="fa-solid fa-users-line vision-icon"></i>
+          <p>
+            <b>Kami menjunjung tinggi hubungan dan komunikasi.</b><br>
+            Setiap proyek yang kami jalankan adalah perjalanan bersama, tempat kami mendengarkan, 
+            memahami, dan menciptakan solusi teknologi yang meningkatkan kinerja bisnis Anda.
+          </p>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="col-lg-4 col-md-6 col-sm-6">
+        <div class="vision-card text-center p-3">
+          <i class="fa-solid fa-crosshairs vision-icon"></i>
+          <p>
+            <b>Tujuan Anda adalah fokus kami.</b><br>
+            Kami mencurahkan perhatian penuh untuk memahami tantangan bisnis Anda sehingga solusi 
+            yang diberikan benar-benar tepat sasaran.
+          </p>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</div>
+
+    <!-- vision -->
+   
+    <!-- layanan -->
+    <div class="layanan my-5">
       <div class="container">
-        <div class="row">
-          <div class="col">
-            <p>kami berkolaborasi dengan perusahaan :</p>
+        <div class="row row-cols-lg-3 row-cols-md-3 row-cols-1 justify-content-center">
+          <!-- CARD 1 -->
+          <div class="col d-flex justify-content-center ">
+            <div class="card1">
+              <div class="atas">
+                <span class="text-white">Teguh di Antara Awan</span>
+                <p class="text-white">
+             Kami membantu merumuskan arah yang jelas, bahkan ketika tantangan tampak samar.
+<br> <span>Layanan:</span> Konsultasi digital & perencanaan strategi.
+                  <i class="fa-solid fa-arrow-right arrow-icon"></i>
+                </p>
+              </div>
+              <div class="bawah">
+                <img src="asset/img/pexels-packermann-1666012.jpg" alt="" />
+              </div>
+            </div>
           </div>
+
+          <!-- CARD 2 -->
+          <div class="col d-flex justify-content-center">
+            <div class="card2">
+              <div class="atas bg-white">
+                <span class="text-dark">Harapan yang Dijaga</span>
+                <p class="text-dark">
+              Kami membangun identitas brand yang tumbuh kuat dari dasar.
+<span>Layanan:</span> Branding, konsep visual, identitas perusahaan.
+                  <i class="fa-solid fa-arrow-right arrow-icon"></i>
+                </p>
+              </div>
+              <div class="bawah">
+                <img src="asset/img/mohamed-jamil-latrach-atQwWrlDHmU-unsplash.jpg" alt="" />
+              </div>
+            </div>
+          </div>
+
+          <!-- CARD 3 -->
+          <div class=" col d-flex justify-content-center">
+            <div class="col card1">
+              <div class="atas">
+                <span class="text-white">Hening yang Kuat</span>
+                <p class="text-white">
+                 Kami menciptakan sistem yang diam-diam kuat, melindungi tanpa terlihat.
+ <Span>Layanan:</Span> Pengamanan website, audit sistem, proteksi data.
+                  <i class="fa-solid fa-arrow-right arrow-icon"></i>
+                </p>
+              </div>
+              <div class="bawah">
+                <img src="asset/img/pexels-frans-van-heerden-201846-1912176.jpg" alt="" />
+              </div>
+            </div>
+          </div>
+          
+        </div>
+        <div class="row row-cols-lg-3 row-cols-md-3 row-cols-1   justify-content-center">
+          <!-- card4 -->
+           <div class=" col d-flex justify-content-center">
+            <div class="card2">
+              <div class="atas bg-white">
+                <span class="text-dark">Tenang Sebelum Menerkam</span>
+                <p class="text-dark">
+                Kami membangun platform yang siap melesat ketika bisnis Anda melangkah.
+ <span>Layanan:</span> Web development & mobile app development.
+                  <i class="fa-solid fa-arrow-right arrow-icon"></i>
+                </p>
+              </div>
+              <div class="bawah">
+                <img src="asset/img/pexels-richard-verbeek-177679-572861.jpg" alt="" />
+              </div>
+            </div>
+          </div>
+ <!-- card4 -->
+  <!-- card5 -->
+        <div class=" col d-flex justify-content-center">
+            <div class="card1">
+              <div class="atas">
+                <span class="text-white">Wibawa dalam Diam</span>
+                <p class="text-white">
+               Kami mengoptimalkan alur bisnis agar lebih rapi, cepat, dan profesional.
+<span>Layanan:</span> Sistem manajemen, automasi, dan workflow.
+                  <i class="fa-solid fa-arrow-right arrow-icon"></i>
+                </p>
+              </div>
+              <div class="bawah">
+                <img src="asset/img/pexels-elsimage-2216607.jpg" alt="" />
+              </div>
+            </div>
+          </div>
+  <!-- card5 -->
+   <!-- card6 -->
+ <div class=" col d-flex justify-content-center">
+            <div class="card2">
+              <div class="atas bg-white">
+                <span class="text-dark">Ambisi Tanpa Batas</span>
+                <p class="text-dark">
+               Kami membantu bisnis bertumbuh tinggi dengan strategi digital yang tepat.
+<span>Layanan:</span> Digital marketing, scaling, dan peningkatan performa.
+                  <i class="fa-solid fa-arrow-right arrow-icon"></i>
+                </p>
+              </div>
+              <div class="bawah">
+                <img src="asset/img/pexels-shukran-1534411.jpg" alt="" />
+              </div>
+            </div>
+          </div>
+   <!-- card6 -->
+          
         </div>
       </div>
     </div>
-    <!-- patner -->
-    <script src="dist/js/script.js "></script>
+
+    <!-- layanan -->
+    <!-- footer -->
+    <div class="footer py-5 mt-5 text-light">
+      <div class="container">
+        <div class="row gy-4">
+          <!-- Brand -->
+          <div class="col-lg-4 col-md-6">
+            <h4 class="footer-title">VisiDigital</h4>
+            <p class="footer-text">
+              Solusi digital modern untuk membantu bisnis berkembang di era
+              teknologi.
+            </p>
+          </div>
+
+          <!-- Menu -->
+          <div class="col-lg-4 col-md-6">
+            <h5 class="footer-subtitle">Menu</h5>
+            <ul class="footer-list text-dark">
+              <li><a href="#">Beranda</a></li>
+              <li><a href="#">Tentang Kami</a></li>
+              <li><a href="#">Layanan</a></li>
+              <li><a href="#">Hubngi Kami</a></li>
+            </ul>
+          </div>
+
+          <!-- Contact -->
+          <div class="col-lg-4 col-md-6">
+            <h5 class="footer-subtitle">Kontak</h5>
+            <ul class="footer-list">
+              <li><i class="fa-solid fa-globe"></i> www.VisiDigital.id</li>
+              <li><i class="fa-solid fa-phone"></i> 0283635203</li>
+              <li><i class="fa-brands fa-linkedin"></i> @VisiDigital</li>
+            </ul>
+          </div>
+        </div>
+
+        <hr class="footer-divider" />
+
+        <p class="footer-copy text-center mt-3">
+          © 2025 VisiDigital. All rights reserved.
+        </p>
+      </div>
+    </div>
+
+    <!-- footer -->
+
+    <!-- login popup -->
+   
+
+<div id="loginPopup" class="popup-modern">
+  <div class="popup-box">
+    <span class="close-modern" onclick="closePopup()">&times;</span>
+
+    <h2 class="popup-title-modern">Konsultasi Gratis</h2>
+    <p class="popup-desc-modern">
+      Isi formulir di bawah ini dan tim kami akan segera menghubungi Anda.
+    </p>
+
+    <form id="loginForm">
+      <div class="form-group-modern">
+        <label>Nama Lengkap</label>
+        <input type="text" id="name" placeholder="Masukkan nama anda">
+        <p class="error" id="nameError"></p>
+      </div>
+
+      <div class="form-group-modern">
+        <label>Email</label>
+        <input type="text" id="email" placeholder="Masukkan email anda">
+        <p class="error" id="emailError"></p>
+      </div>
+
+      <div class="form-group-modern">
+        <label>Pesan Singkat</label>
+        <textarea id="password" placeholder="Tulis pesan anda..."></textarea>
+        <p class="error" id="passwordError"></p>
+      </div>
+
+      <button type="submit" class="btn-modern">Kirim Sekarang</button>
+    </form>
+  </div>
+</div>
+
+
+    <!-- login popup -->
+      <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+
+    
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
       crossorigin="anonymous"
     ></script>
+    
+   <script src="dist/js/script.js "></script>
+    
   </body>
 </html>

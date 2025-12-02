@@ -8,6 +8,13 @@
   list-style-type: none;
   border: none;
 }
+.fa-check {
+  color: var(--btn-color);
+}
+span {
+  font-weight: 700;
+  margin-bottom: 10px;
+}
 /* navbar */
 
 .fa-bootstrap {
@@ -31,15 +38,45 @@
 /* navbar */
 /* hero */
 .hero {
-  background-image: linear-gradient(rgba(1, 1, 1, 0.5)),
-    url(../../asset/img/christin-hume-Hcfwew744z4-unsplash.jpg);
-  background-repeat: no-repeat;
-  width: 100%;
+  position: relative;
   height: 100vh;
-  /* filter: brightness(80%); */
-  background-size: cover;
-  background-position: center;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
+
+/* Video di belakang */
+.hero-video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  transform: translate(-50%, -50%);
+  object-position: center center; /* ini yang paling penting */
+}
+
+
+/* Konten teks */
+.hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  color: #fff;
+}
+
+.hero-content h1 {
+  font-size: 50px;
+  font-weight: 700;
+}
+
+.hero-content p {
+  font-size: 20px;
+}
+
 
 .sc {
   background-color: var(--btn-color);
@@ -48,6 +85,34 @@
 .sc:hover {
   background-color: var(--btn-color);
   transform: scale(1.05);
+}
+.decsimghero {
+  width: 60%;
+  margin-left: 80px;
+}
+/* Tombol Play/Pause */
+.video-control {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  z-index: 10;
+  background: rgba(0, 0, 0, 0.5);
+  border: none;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  color: #fff;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  backdrop-filter: blur(5px);
+  transition: 0.3s ease;
+}
+
+.video-control:hover {
+  background: rgba(255, 255, 255, 0.2);
 }
 
 /* hero */
@@ -68,3 +133,395 @@
   text-align: justify;
 }
 /* about */
+/* vision */
+.vision {
+  background-color: var(--primary-color);
+}
+.vision i {
+  font-size: 60px;
+}
+.decsvisionh3 {
+  margin-bottom: 50px;
+}
+/* Vision Section Modern */
+.vision {
+  background: #0560b5; /* biru lebih gelap agar kontras */
+  border-radius: 0 0 30px 30px;
+}
+
+.vision-card {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 18px;
+  backdrop-filter: blur(5px);
+  transition: 0.3s ease-in-out;
+}
+
+.vision-card:hover {
+  transform: translateY(-5px);
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.vision-card .vision-icon {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  color: var(--btn-color);
+  padding-bottom: 10px;
+}
+
+
+/* Text styling */
+.vision p {
+  line-height: 1.6;
+  font-size: 15px;
+}
+/* Semua card vision jadi sama tinggi pada desktop & iPad */
+.vision-card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.vision .row {
+  align-items: stretch; /* supaya semua col punya tinggi sama */
+}
+
+/* Pastikan p tidak membuat card melar */
+.vision-card p {
+  flex-grow: 1;
+}
+
+@media (min-width: 768px) {
+  .vision-card {
+    min-height: 300px; /* ubah sesuai kebutuhan */
+  }
+}
+
+/* Responsive: HP */
+@media (max-width: 576px) {
+  .vision-card {
+    padding: 20px;
+    text-align: center;
+  }
+
+  .vision-icon {
+    font-size: 45px;
+  }
+
+  .vision p {
+    font-size: 14px;
+  }
+}
+
+/* vision */
+/* layanan */
+ 
+.card1,
+.card2 {
+  margin-top: -10px;
+  height: 80%;
+  width: 500px;
+  border-radius: 50px;
+  overflow: hidden;
+  font-family: "Poppins", sans-serif;
+  cursor: pointer;
+
+  /* ⭐ Visa Soft Shadow */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08), 0 20px 40px rgba(0, 0, 0, 0.12);
+  transition: box-shadow 0.35s ease;
+}
+
+/* ⭐ Visa Hover Shadow */
+.card1:hover,
+.card2:hover {
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1), 0 28px 60px rgba(0, 0, 0, 0.18);
+}
+
+.card1 .atas,
+.card2 .atas {
+  padding: 20px;
+}
+
+.card1 .atas {
+  background-color: black;
+}
+.card2 .atas {
+  background-color: white;
+}
+
+.card1 .bawah,
+.card2 .bawah {
+  position: relative;
+  overflow: hidden;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+
+.card1 .bawah img,
+.card2 .bawah img {
+  width: 100%;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.card1:hover .bawah img,
+.card2:hover .bawah img {
+  transform: scale(1.1);
+}
+
+/* GRADIENTS */
+.card1 .bawah::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.95),
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 0)
+  );
+  pointer-events: none;
+}
+
+.card2 .bawah::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.95),
+    rgba(255, 255, 255, 0),
+    rgba(255, 255, 255, 0)
+  );
+  pointer-events: none;
+}
+
+/* Arrow */
+.arrow-icon {
+  display: inline-block;
+  margin-left: 8px;
+  font-size: 18px;
+  transition: transform 0.3s ease, color 0.3s ease;
+  color: #ffffffb5;
+}
+
+.card1:hover .arrow-icon {
+  transform: translateX(8px);
+  color: #00c8ff;
+}
+
+.card2 .arrow-icon {
+  color: #000000b5;
+}
+
+.card2:hover .arrow-icon {
+  transform: translateX(8px);
+  color: #0077ff;
+}
+/* layanan */
+/* footer */
+.footer {
+  background-color: var(--primary-color);
+}
+.footer-list a {
+  color: #fff;
+}
+.footer-list a {
+  text-decoration: none; /* REMOVE UNDERLINE */
+  /* or #fff if dark background */
+}
+
+.footer-subtitle {
+  margin-left: 10%;
+}
+/* footer */
+/* BACKDROP */
+.popup-modern {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  backdrop-filter: blur(6px);
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+/* POPUP BOX */
+.popup-box {
+  width: 90%;
+  max-width: 420px;
+  padding: 28px;
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  border-radius: 22px;
+  box-shadow: 0 15px 45px rgba(0, 0, 0, 0.2);
+  animation: popupFade 0.35s ease;
+  position: relative;
+}
+
+/* TITLE */
+.popup-title-modern {
+  text-align: center;
+  font-weight: 700;
+  font-size: 26px;
+  color: #0672d6;
+}
+
+.popup-desc-modern {
+  text-align: center;
+  font-size: 14px;
+  color: #555;
+  margin-top: -5px;
+  margin-bottom: 18px;
+}
+
+/* CLOSE BUTTON */
+.close-modern {
+  position: absolute;
+  top: 12px;
+  right: 18px;
+  font-size: 25px;
+  cursor: pointer;
+  color: #333;
+  transition: 0.2s;
+}
+.close-modern:hover {
+  color: #ff3b3b;
+}
+
+/* INPUT FIELD */
+.form-group-modern {
+  margin-bottom: 15px;
+}
+
+.form-group-modern label {
+  font-weight: 600;
+  font-size: 14px;
+  color: #222;
+}
+
+.form-group-modern input,
+.form-group-modern textarea {
+  width: 100%;
+  padding: 11px 12px;
+  border-radius: 12px;
+  border: 1.8px solid #cfcfcf;
+  background: #fff;
+  font-size: 14px;
+  margin-top: 5px;
+  transition: all 0.25s ease;
+}
+
+/* TEXTAREA FIXED HEIGHT */
+.form-group-modern textarea {
+  height: 110px;
+  resize: none;
+}
+
+/* FOCUS EFFECT */
+.form-group-modern input:focus,
+.form-group-modern textarea:focus {
+  border-color: #0672d6;
+  box-shadow: 0 0 0 3px rgba(6, 114, 214, 0.15);
+  outline: none;
+}
+
+/* SUBMIT BUTTON */
+.btn-modern {
+  width: 100%;
+  padding: 12px;
+  border-radius: 12px;
+  border: none;
+  font-size: 16px;
+  background: #0672d6;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.25s ease;
+}
+
+.btn-modern:hover {
+  background: #055bb0;
+}
+
+/* ERROR TEXT */
+.error {
+  font-size: 12px;
+  color: red;
+  margin-top: 5px;
+}
+
+/* ANIMATION */
+@keyframes popupFade {
+  from {
+    opacity: 0;
+    transform: scale(0.88);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+/* Reduce spacing on mobile */
+/* Reduce spacing on mobile */
+@media (max-width: 576px) {
+  .card1,
+  .card2 {
+    margin-top: 10px;     /* Kurangi jarak */
+    height: auto;         /* Biar lebih rapat */
+  }
+
+  .card1 .atas,
+  .card2 .atas {
+    padding: 20px;        /* Reduce padding */
+  }
+
+  .card1 .bawah,
+  .card2 .bawah {
+    margin-top: -10px;    /* Kurangi space bawah */
+  }
+}
+/* swiper */
+.swiper-slide img {
+  width: 120px;     /* bebas ubah */
+  height: auto;
+  object-fit: contain;
+}
+
+@media (max-width: 576px) {
+  .swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .swiper-slide img {
+    margin: 0 auto;
+    display: block;
+  }
+}
+
+ 
+  
+/* ipad about */
+/* Sama tinggi untuk kolom ABOUT di iPad (768–991px) */
+@media (min-width: 768px) and (max-width: 991px) {
+  .about .row {
+    display: flex;
+    align-items: stretch; /* membuat kedua kolom sama tinggi */
+  }
+
+  .about .col {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .about img {
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+}
