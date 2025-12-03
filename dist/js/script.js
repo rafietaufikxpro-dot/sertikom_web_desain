@@ -172,3 +172,18 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 });
+document.addEventListener('DOMContentLoaded', function () {
+  const navbar = document.querySelector('.navbar');
+  const collapseEl = document.getElementById('navbarNavDropdown');
+
+  if (collapseEl) {
+    collapseEl.addEventListener('shown.bs.collapse', function () {
+      // Navbar terbuka di mobile
+      navbar.classList.add('navbar-active');
+    });
+    collapseEl.addEventListener('hidden.bs.collapse', function () {
+      // Navbar collapse ditutup
+      navbar.classList.remove('navbar-active');
+    });
+  }
+});
